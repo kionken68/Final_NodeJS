@@ -66,7 +66,8 @@
                       <h3 class="panel-title"><img class="pull-right" src="http://i76.imgup.net/accepted_c22e0.png">Payment Details</h3>
                     </div>
                     <div class="panel-body">
-                      <form role="form" id="payment-form">
+                      <form role="form" id="payment-form" action="/payment" method="POST">
+                        <input type="hidden" name="stripeMoney" value="<%= foundCart.total %>">
                         <div class="row">
                           <div class="col-xs-12">
                             <div class="form-group">
@@ -99,7 +100,7 @@
                         </div>
                         <div class="row">
                           <div class="col-xs-12">
-                            <button class="btn btn-success btn-lg btn-block" type="submit">Pay</button>
+                            <button class="btn btn-success btn-lg btn-block" type="submit">Pay: $(<%= foundCart.total %>)</button>
                           </div>
                         </div>
                         <div class="row" style="display:none;">
@@ -114,10 +115,6 @@
               </div>
             </div>
 
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
