@@ -1,0 +1,14 @@
+[2016-05-10 08:47:02,624][INFO ][node                     ] [Peter Petruski] version[2.3.2], pid[7720], build[b9e4a6a/2016-04-21T16:03:47Z]
+[2016-05-10 08:47:02,624][INFO ][node                     ] [Peter Petruski] initializing ...
+[2016-05-10 08:47:03,903][INFO ][plugins                  ] [Peter Petruski] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-05-10 08:47:03,988][INFO ][env                      ] [Peter Petruski] using [1] data paths, mounts [[Data D (E:)]], net usable_space [300.3gb], net total_space [344.3gb], spins? [unknown], types [NTFS]
+[2016-05-10 08:47:04,004][INFO ][env                      ] [Peter Petruski] heap size [910.5mb], compressed ordinary object pointers [true]
+[2016-05-10 08:47:08,645][INFO ][node                     ] [Peter Petruski] initialized
+[2016-05-10 08:47:08,645][INFO ][node                     ] [Peter Petruski] starting ...
+[2016-05-10 08:47:09,115][INFO ][transport                ] [Peter Petruski] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-05-10 08:47:09,131][INFO ][discovery                ] [Peter Petruski] elasticsearch/yFMzgrDvTDGmmzkxOKRNFw
+[2016-05-10 08:47:13,202][INFO ][cluster.service          ] [Peter Petruski] new_master {Peter Petruski}{yFMzgrDvTDGmmzkxOKRNFw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-05-10 08:47:13,355][INFO ][http                     ] [Peter Petruski] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-05-10 08:47:13,371][INFO ][node                     ] [Peter Petruski] started
+[2016-05-10 08:47:13,603][INFO ][gateway                  ] [Peter Petruski] recovered [1] indices into cluster_state
+[2016-05-10 08:47:15,624][INFO ][cluster.routing.allocation] [Peter Petruski] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[products][4]] ...]).
