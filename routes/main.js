@@ -50,8 +50,7 @@ stream.on('error',function(err){
 });
 
 router.get('/cart',function(req,res,next){
-  Cart
-    .findOne({owner:req.user._id})
+  Cart.findOne({owner:req.user._id})
     .populate('items.item')
     .exec(function(err,foundCart){
       if(err) return next(err);
@@ -64,17 +63,23 @@ router.get('/cart',function(req,res,next){
 
 router.post('/product/:product_id',function(req,res,next){
   Cart.findOne({owner:req.user._id},function(err,cart){
-    cart.items.push({
-      item:req.body.product_id,
-      price:parseFloat(req.body.priceValue),
-      quantity:parseInt(req.body.quantity)
-    });
-    cart.total=(cart.total + parseFloat(req.body.priceValue)).toFixed(2);
+    if (cart.items!=null) {
+      cart.items.push({
+        item:req.body.product_id,
+        price:parseFloat(req.body.priceValue),
+        quantity:parseInt(req.body.quantity)
+      });
+      cart.total=(cart.total + parseFloat(req.body.priceValue)).toFixed(2);
 
-    cart.save(function(err){
-      if(err) return next(err);
-      return res.redirect('/cart');
-    });
+      cart.save(function(err){
+        if(err) return next(err);
+        return res.redirect('/cart');
+        });
+    }else {
+      console.log(cart);
+    }
+
+
   });
 });
 
